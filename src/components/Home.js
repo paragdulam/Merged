@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Styled from "styled-components";
 import { AuthContext } from "../App";
 
@@ -8,7 +8,7 @@ export default function Home() {
   const { state, dispatch } = useContext(AuthContext);
 
   if (!state.isLoggedIn) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
 
   const { avatar_url, name, public_repos, followers, following } = state.user

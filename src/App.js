@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import { initialState, reducer } from "./store/reducer";
@@ -18,10 +18,10 @@ function App() {
       }}
     >
     <Router>
-      <Switch>
-        <Route path="/login" component={Login}/>
-        <Route path="/" component={Home}/>
-      </Switch>
+      <Routes>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
     </Router>
     </AuthContext.Provider>
   );
