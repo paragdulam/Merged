@@ -14,9 +14,13 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:coverage": "vitest --coverage",
         "eject": "react-scripts eject",
-        "cypress:open": "cypress open"
+        "e2e": "playwright test",
+        "e2e:ui": "playwright test --ui",
+        "e2e:debug": "playwright test --debug"
     },
     "eslintConfig": {
         "extends": [
@@ -37,6 +41,10 @@
         ]
     },
     "devDependencies": {
-        "cypress": "^6.8.0"
+        "@playwright/test": "^1.40.0",
+        "vitest": "^1.0.0",
+        "@vitest/ui": "^1.0.0",
+        "@vitejs/plugin-react": "^4.0.0",
+        "jsdom": "^23.0.0"
     }
 }
