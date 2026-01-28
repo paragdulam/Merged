@@ -55,5 +55,5 @@ app.post("/authenticate", (req, res) => {
 });
 
 // require("./app/routes/user.routes.js")(app);
-const PORT = process.env.SERVER_PORT || 5000;
+const PORT = process.env.SERVER_PORT || 5001;
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
